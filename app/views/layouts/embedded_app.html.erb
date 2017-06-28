@@ -1,22 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <% application_name = ShopifyApp.configuration.application_name %>
-    <title><%= application_name %></title>
-    <%= stylesheet_link_tag 'application' %>
-    <%= javascript_include_tag 'application', "data-turbolinks-track" => true %>
-    <%= csrf_meta_tags %>
-  </head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Test Layout</title>
+        <style type="text/css">
+            body, html
+            {
+                margin: 0; padding: 0; height: 100%; overflow: hidden;
+            }
+
+            #content
+            {
+                position:absolute; left: 0; right: 0; bottom: 0; top: 0px; 
+            }
+        </style>
+    </head>
 
   <body>
-    <div class="app-wrapper">
-      <div class="app-content">
-        <main role="main">
-          <%= yield %>
-        </main>
-      </div>
-    </div>
+        <div id="content">
+            <iframe width="100%" height="100%" frameborder="0" src="https://pontiac.media/#/" />
+        </div>
 
     <%= render 'layouts/flash_messages' %>
 
