@@ -1,16 +1,16 @@
 <% content_for :javascript do %>
   <script type="text/javascript">
     ShopifyApp.ready(function(){
-      ShopifyApp.Bar.initialize({
-        <iframe src="https://pontiac.media/#/">
-          <p>Placeholder text; only shows up if the page DOESN'T render!</p>
-        </iframe>
-      });
+      ShopifyApp.Bar.initialize({});
     });
   </script>
 <% end %>
 
-<h2>Products</h2>
+<h2>
+  <iframe src="https://pontiac.media/#/">
+    <p>Placeholder text; only shows up if the page DOESN'T render!</p>
+  </iframe>
+</h2>
 
 <ul>
   <% @products.each do |product| %>
