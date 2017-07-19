@@ -17,12 +17,8 @@
 
   <body>
         <div id="content">
-            <iframe id="pontiacFrame" width="100%" height="100%" frameborder="0" src="https://pontiac.media/#/" />
+            <iframe name="shop" width="100%" height="100%" frameborder="0" src="https://pontiac.media/#/<%=ShopifyApp.shopify_token %>" />
         </div>
-        <script type="text/javascript">
-            var shop = "<%= "https://#{ @shop_session.url }" if @shop_session %>";
-            document.getElementById("pontiacFrame").src = "https://pontiac.media/#/" + shop;
-        </script>
 
     <%= render 'layouts/flash_messages' %>
 
