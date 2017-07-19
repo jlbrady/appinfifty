@@ -10,15 +10,19 @@
 
             #content
             {
-                position:absolute; left: 0; right: 0; bottom: 0; top: 0px; 
+                position:absolute; left: 0; right: 0; bottom: 0; top: 0px;
             }
         </style>
     </head>
 
   <body>
         <div id="content">
-            <iframe width="100%" height="100%" frameborder="0" src="https://pontiac.media/#/" />
+            <iframe id="pontiacFrame" width="100%" height="100%" frameborder="0" src="" />
         </div>
+        <script type="text/javascript">
+            var shop = "<%= "https://#{ @shop_session.url }" if @shop_session %>";
+            document.getElementById("pontiacFrame").src = "https://pontiac.media/#/" + "<%= "https://#{ @shop_session.url }" if @shop_session %>";
+        </script>
 
     <%= render 'layouts/flash_messages' %>
 

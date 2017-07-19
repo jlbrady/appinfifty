@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails test-app: development" uuid="67665daf-7006-43be-9d78-51589a018af4">
+      <database-info product="PostgreSQL" version="9.6.2" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.1.1">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>yfrgzzgxnrnoby</user-name>
+      <introspection-schemas>d3hak55aj3jdep:public</introspection-schemas>
+    </data-source>
+    <data-source name="Rails test-app: production" uuid="0fae1da9-e179-4c10-8e1e-0abbaf174fff">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <first-sync>true</first-sync>
+      <user-name>test-app</user-name>
+    </data-source>
+    <data-source name="Rails test-app: test" uuid="82da9961-44b7-42e7-bfd8-ef569ee15d3f">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <first-sync>true</first-sync>
+      <ssl-config>
+        <enabled>true</enabled>
+      </ssl-config>
+    </data-source>
+  </component>
+</project>
