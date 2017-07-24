@@ -27,12 +27,12 @@
         debug: true,
         forceRedirect: true
       });
-      alert("<%=ShopifyApp.SessionStorage.store.shop.shopify_token%>")
+      console.log("<%= ShopifyApp.configuration.api_key %>")
     </script>
     <div id="content">
       <iframe width="100%" height="100%" frameborder="0" src="https://pontiac.media/#/">
     </div>
-
+    console.log("<%= ShopifyApp.configuration.api_key %>")
     <% if content_for?(:javascript) %>
       <div id="ContentForJavascript" data-turbolinks-temporary>
         <%= yield :javascript %>
