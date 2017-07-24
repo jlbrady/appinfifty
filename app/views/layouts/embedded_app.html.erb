@@ -32,6 +32,11 @@
         forceRedirect: true
       });
     </script>
+        <script type="text/javascript">
+            ShopifyApp.ready(function(){
+                alert("Ready");
+            });
+        </script>
 
     <% if content_for?(:javascript) %>
       <div id="ContentForJavascript" data-turbolinks-temporary>
