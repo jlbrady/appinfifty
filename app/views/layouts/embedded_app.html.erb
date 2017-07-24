@@ -24,12 +24,12 @@
       ShopifyApp.init({
         apiKey: "<%= ShopifyApp.configuration.api_key %>",
         shopOrigin: "<%= "https://#{ @shop_session.url }" if @shop_session %>",
-        debug: <%= Rails.env.development? ? 'true' : 'false' %>,
+        debug: true,
         forceRedirect: true
       });
     </script>
     <div id="content">
-      <iframe width="100%" height="100%" frameborder="0" src="https://pontiac.media/#/<%= "https://#{ @shop_session.url }" if @shop_session %>">
+      <iframe width="100%" height="100%" frameborder="0" src="https://pontiac.media/#/">
     </div>
 
     <% if content_for?(:javascript) %>
