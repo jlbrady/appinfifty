@@ -29,13 +29,8 @@
       });
     </script>
     <div id="content">
-      <iframe width="100%" height="100%" frameborder="0" src="https://pontiac.media/#/login"/>
+      <iframe width="100%" height="100%" frameborder="0" src="https://appinfifty.herokuapp.com/auth/shopify/callback"/>
     </div>
-        <script type="text/javascript">
-            ShopifyApp.ready(function(){
-                alert("Ready");
-            });
-        </script>
 
     <% if content_for?(:javascript) %>
       <div id="ContentForJavascript" data-turbolinks-temporary>
