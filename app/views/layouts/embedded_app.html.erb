@@ -29,15 +29,21 @@
       });
       var testing = "https://pontiac.media/#/" + "<%= "https://#{ @shop_session.url }" if @shop_session %>";
     </script>
+    <script type="text/javascript">
+        ShopifyApp.ready(function(){
+            ShopifyApp.Bar.initialize({});
+        });
+        console.log("here");
+    </script>
     <div id="content">
       <iframe id = "main_frame" width="100%" height="100%" frameborder="0" src="https://pontiac.media/#/"/>
     </div>
     <script type="text/javascript">
-      console.log("here")
+      console.log("here");
     </script>
     <script type="text/javascript">
         console.log(testing);
-        document.getElementById('main_frame').src = testing
+        document.getElementById('main_frame').src = testing;
     </script>
     <% if content_for?(:javascript) %>
       <div id="ContentForJavascript" data-turbolinks-temporary>
