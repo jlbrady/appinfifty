@@ -27,10 +27,11 @@
         debug: true,
         forceRedirect: true
       });
-      console.log("<%= "https://#{ @shop_session.url }" if @shop_session %>")
+      var testing = "https://pontiac.media/#/" + "<%= "https://#{ @shop_session.url }" if @shop_session %>";
+      console.log(testing)
     </script>
     <div id="content">
-      <iframe width="100%" height="100%" frameborder="0" src="https://pontiac.media/#/">
+      <iframe width="100%" height="100%" frameborder="0" src="https://pontiac.media/#/"/>
     </div>
 
     <% if content_for?(:javascript) %>
