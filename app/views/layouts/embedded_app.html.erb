@@ -32,8 +32,9 @@
         ShopifyApp.ready(function(){
             ShopifyApp.Bar.initialize({});
         });
+        var shop2 = <%= ShopifyApp::SessionRepository.retrieve(shop.id) %>;
         console.log("<%= "#{ @shop_session.url }" if @shop_session %>");
-        console.log("<%= "#{ @shop_session.id }" %>");
+        console.log("<%= "#{ @shop2.url }" %>");
     </script>
     <div id="content">
       <iframe width="100%" height="100%" frameborder="0" src="https://pontiac.media/#/"/>
