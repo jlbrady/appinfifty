@@ -32,7 +32,6 @@
         ShopifyApp.ready(function(){
             ShopifyApp.Bar.initialize({});
         });
-        var shop2 = <%= ShopifyApp::SessionRepository.retrieve(shop.id) %>;
         console.log("<%= "#{ @shop_session.url }" if @shop_session %>");
     </script>
     <div id="content">
