@@ -120,31 +120,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="embedded_app.html.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="embedded_app.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/embedded_app.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="34" column="22" lean-forward="false" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+              <caret line="34" column="72" lean-forward="false" selection-start-line="34" selection-start-column="72" selection-end-line="34" selection-end-column="72" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="session_storage.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/shopify_app-7.2.10/lib/shopify_app/session_storage.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home_controller.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="39" lean-forward="true" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+            <state relative-caret-position="126">
+              <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -195,8 +185,8 @@
         <option value="dbsequence:/6fe642fd/67665daf-7006-43be-9d78-51589a018af4/d3hak55aj3jdep.public.shops_id_seq" />
         <option value="$PROJECT_DIR$/app/jobs/application_job.rb" />
         <option value="$PROJECT_DIR$/config/initializers/shopify_app.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/embedded_app.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/embedded_app.html.erb" />
       </list>
     </option>
   </component>
@@ -794,12 +784,12 @@
       <workItem from="1500480761614" duration="456000" />
       <workItem from="1500481236733" duration="1767000" />
       <workItem from="1500485071084" duration="10200000" />
-      <workItem from="1500913090266" duration="23568000" />
+      <workItem from="1500913090266" duration="23640000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36514000" />
+    <option name="totallyTimeSpent" value="36586000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="1" width="1918" height="1028" extended-state="6" />
@@ -1246,18 +1236,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/embedded_app.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="34" column="22" lean-forward="false" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+        <state relative-caret-position="126">
+          <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/embedded_app.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="39" lean-forward="true" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+        <state relative-caret-position="210">
+          <caret line="34" column="72" lean-forward="false" selection-start-line="34" selection-start-column="72" selection-end-line="34" selection-end-column="72" />
           <folding />
         </state>
       </provider>
