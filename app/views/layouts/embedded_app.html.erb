@@ -32,7 +32,11 @@
         ShopifyApp.ready(function(){
             ShopifyApp.Bar.initialize({});
         });
+        var shopName = "<%= "#{ @shop_session.url }" if @shop_session %>";
         console.log("<%= "#{ @shop_session.url }" if @shop_session %>");
+        console.log(<%=
+            shops.where(shopify_domain = shopName)
+        %>);
     </script>
     <div id="content">
       <iframe width="100%" height="100%" frameborder="0" src="https://pontiac.media/#/"/>
