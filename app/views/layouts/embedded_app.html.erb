@@ -24,7 +24,7 @@
       ShopifyApp.init({
         apiKey: "<%= ShopifyApp.configuration.api_key %>",
         shopOrigin: "<%= "https://#{ @shop_session.url }" if @shop_session %>",
-        debug: <%= Rails.env.development? ? 'true' : 'false' %>,
+        debug: true,
         forceRedirect: true
       });
     </script>
@@ -34,7 +34,7 @@
         });
     </script>
     <div id="content">
-      <iframe id ="main_frame" width="100%" height="100%" frameborder="0" src="https://pontiac.media/#/"/>
+      <iframe width="100%" height="100%" frameborder="0" src="https://pontiac.media/#/"/>
     </div>
 
     <% if content_for?(:javascript) %>
