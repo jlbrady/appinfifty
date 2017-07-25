@@ -35,7 +35,7 @@
         var shopName = "<%= "#{ @shop_session.url }" if @shop_session %>";
         console.log("<%= "#{ @shop_session.url }" if @shop_session %>");
         console.log(<%=
-            shops.where(shopify_domain = shopName)
+            Shop.where(shopify_domain = shopName)
         %>);
     </script>
     <div id="content">
