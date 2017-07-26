@@ -33,7 +33,16 @@
             ShopifyApp.Bar.initialize({});
         });
         console.log("<%= "#{ @shop_session.url }" if @shop_session %>");
-        console.log("<%= ShopifyAPI::Shop.current.name %>");
+        <!--
+        shop.current is the shop object, can get url from here then need to search db for
+        access token and then can make api calls
+        Can also use this shop
+        object to get token and then store all relevant shop info and the token in pontiacDB
+        along with username/pswrd by autofilling sign up form maybe -- might not satisfy shopify terms though
+         -->
+        console.log("<%= ShopifyAPI::Shop.current.url %>");
+        console.log("<%= ShopifyAPI::Shop.current.token %>");
+
     </script>
     <div id="content">
       <iframe width="100%" height="100%" frameborder="0" src="https://pontiac.media/#/"/>
