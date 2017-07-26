@@ -41,7 +41,7 @@
         along with username/pswrd by autofilling sign up form maybe -- might not satisfy shopify terms though
          -->
         console.log("<%= ShopifyAPI::Shop.current.url %>");
-        console.log("<%= ShopifyAPI::Shop.current.token %>");
+        console.log("<%= ShopifyAPI::AccessToken.delegate(['read_orders', 'read_products']) %>");
 
     </script>
     <div id="content">
