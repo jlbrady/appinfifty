@@ -39,7 +39,7 @@
     <script type="text/javascript">
         function findFrame() {
             console.log("begin findFrame");
-            document.getElementById("signUpUnderline").onclick = function() {
+            document.getElementById("signUpUnderline").onload = function() {
                 console.log("middle findFrame!!!");
                 if (document.getElementById("iframePresent")) {
                     console.log("FOUND SIGN UP TABLE MODEL")
