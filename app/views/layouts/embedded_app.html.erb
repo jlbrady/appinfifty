@@ -35,10 +35,9 @@
         console.log("Session URL: <%= "#{ @shop_session.url }" if @shop_session %>");
         console.log("Shop Name: <%= ShopifyAPI::Shop.current.name %>");
         console.log("Shop Access Token: <%= ShopifyAPI::Shop.headers['X-Shopify-Access-Token'] %>");
-        console.log(window.top.location.href);
     </script>
     <div id="content">
-      <iframe width="100%" height="100%" frameborder="0" src="https://pontiac.media/#/"/>
+      <iframe width="100%" height="100%" frameborder="0" src="https://91639f89.ngrok.io/#/"/>
     </div>
 
     <% if content_for?(:javascript) %>
