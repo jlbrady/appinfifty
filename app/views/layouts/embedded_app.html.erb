@@ -37,12 +37,12 @@
         console.log("Shop Access Token: <%= ShopifyAPI::Shop.headers['X-Shopify-Access-Token'] %>");
     </script>
     <div id="content">
-      <iframe width="100%" height="100%" frameborder="0" src="https://91639f89.ngrok.io/#/"/>
+      <iframe id="pontiacFrame" width="100%" height="100%" frameborder="0" src="https://91639f89.ngrok.io/#/"/>
     </div>
     <script type="text/javascript">
         document.getElementById("content").onchange = function() {findFrame()};
         function findFrame() {
-            if (document.getElementById("iframePresent")) {
+            if (document.getElementById("pontiacFrame")) {
                 console.log("FOUND SIGN UP TABLE MODEL")
             } else {
                 console.log("sign up model not found")
