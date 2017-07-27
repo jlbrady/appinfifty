@@ -39,9 +39,12 @@
     <script type="text/javascript">
         function findFrame() {
             console.log("begin findFrame");
-            document.getElementById("signUpUnderline").onload = function() {
+            var iframe = document.getElementById("pontiacFrame");
+            var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+            console.log("inner doc?????");
+            innerDoc.getElementById("signUpUnderline").onclick = function() {
                 console.log("middle findFrame!!!");
-                if (document.getElementById("iframePresent")) {
+                if (innerDoc.getElementById("iframePresent")) {
                     console.log("FOUND SIGN UP TABLE MODEL")
                 } else {
                     console.log("sign up model not found")
