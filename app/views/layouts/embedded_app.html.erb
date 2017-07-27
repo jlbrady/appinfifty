@@ -38,6 +38,16 @@
     </script>
     <div id="content">
       <iframe width="100%" height="100%" frameborder="0" src="https://91639f89.ngrok.io/#/"/>
+      <script type="text/javascript">
+        document.getElementById("content").onchange = function() {findFrame()};
+        function findFrame() {
+            if (document.getElementById("iframePresent")) {
+                console.log("FOUND SIGN UP TABLE MODEL")
+            } else {
+                console.log("sign up model not found")
+            }
+        }
+      </script>
     </div>
 
     <% if content_for?(:javascript) %>
