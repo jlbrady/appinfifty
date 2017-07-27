@@ -15,7 +15,7 @@
         </style>
     </head>
 
-  <body id="pontiacFrame">
+  <body>
     <%= render 'layouts/flash_messages' %>
 
     <script src="https://cdn.shopify.com/s/assets/external/app.js?<%= Time.now.strftime('%Y%m%d%H') %>"></script>
@@ -36,9 +36,6 @@
         console.log("Shop Name: <%= ShopifyAPI::Shop.current.name %>");
         console.log("Shop Access Token: <%= ShopifyAPI::Shop.headers['X-Shopify-Access-Token'] %>");
     </script>
-    <div id="content">
-      <iframe width="100%" height="100%" frameborder="0" src="https://91639f89.ngrok.io/#/"/>
-    </div>
     <script type="text/javascript">
         document.getElementById("pontiacFrame").onchange = function() {findFrame()};
         function findFrame() {
@@ -49,6 +46,9 @@
             }
         }
     </script>
+    <div id="content">
+      <iframe id="pontiacFrame" width="100%" height="100%" frameborder="0" src="https://91639f89.ngrok.io/#/"/>
+    </div>
 
     <% if content_for?(:javascript) %>
       <div id="ContentForJavascript" data-turbolinks-temporary>
