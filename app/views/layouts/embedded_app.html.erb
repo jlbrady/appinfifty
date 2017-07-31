@@ -40,7 +40,6 @@
       console.log("beforee findFrame");
       // can try to use the window.postmessage() function here? -- make sure its secure first
       // null value with .window and without -- cross origin issue here too how to postmessage?
-      document.getElementById('pontiacFrame').window.onload = function findFrame() {
           // cant use html_safe here need to sanitize inputs first
           var shopObj = <%= ShopifyAPI::Shop.current.to_json.to_s.html_safe %>;
           //var iframe = document.getElementById("pontiacFrame").window; this will never work with multiple origins
@@ -49,7 +48,6 @@
           //iframe.getElementById("signUpUnderline").onClick = function() {
           window.addEventListener("message", receiveMessage, false);
           function receiveMessage(event) {
-              console.log("event.origin");
               if (event.origin !== "https://26c05261.ngrok.io/#/") {
                   // make sure I have the correct origins
                   console.log("Single origin policy protection");
@@ -57,10 +55,10 @@
                   // this is not a window like it needs to be event origin is just a url
                   // this is where the issue lies
                   //event.origin.postMessage(shopObj, "https://26c05261.ngrok.io/#/");
+                  console.log("event.origin: " + event.origin);
               }
           }
-          console.log("end findFrame")
-      };
+          console.log("end findFrame");
     </script>
       <iframe id="pontiacFrame" width="100%" height="100%" frameborder="0" src="https://26c05261.ngrok.io/#/"/>
 
