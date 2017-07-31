@@ -37,20 +37,34 @@
         console.log("Shop Access Token: <%= ShopifyAPI::Shop.headers['X-Shopify-Access-Token'] %>");
     </script>
     <script type="text/javascript">
+      // can try to use the window.postmessage() function here? -- make sure its secure first
         function findFrame() {
             console.log("begin findFrame");
-            var iframe = document.getElementById("pontiacFrame");
-            var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-            console.log("inner doc?????");
-            innerDoc.getElementById("signUpUnderline").onclick = function() {
+            // never finds signUpUnderline
+            document.getElementById("signUpUnderline").onload = function() {
                 console.log("middle findFrame!!!");
-                if (innerDoc.getElementById("iframePresent")) {
-                    console.log("FOUND SIGN UP TABLE MODEL")
+                if (document.getElementById("iframePresent")) {
+                    console.log("FOUND SIGN UP TABLE MODAL")
                 } else {
-                    console.log("sign up model not found")
+                    console.log("sign up modal not found")
                 }
             };
             console.log("end findFrame")
+            /* XSS vulnerable doesnt work
+             console.log("begin findFrame");
+             var iframe = document.getElementById("pontiacFrame");
+             var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+             console.log("inner doc?????");
+             innerDoc.getElementById("signUpUnderline").onclick = function() {
+             console.log("middle findFrame!!!");
+             if (innerDoc.getElementById("iframePresent")) {
+             console.log("FOUND SIGN UP TABLE MODEL")
+             } else {
+             console.log("sign up model not found")
+             }
+             };
+             console.log("end findFrame")
+             */
         }
     </script>
     <div id="content">
