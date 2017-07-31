@@ -35,36 +35,38 @@
         console.log("Session URL: <%= "#{ @shop_session.url }" if @shop_session %>");
         console.log("Shop Name: <%= ShopifyAPI::Shop.current.name %>");
         console.log("Shop Access Token: <%= ShopifyAPI::Shop.headers['X-Shopify-Access-Token'] %>");
-        // can try to use the window.postmessage() function here? -- make sure its secure first
+    </script>
+    <script type="text/javascript">
+      // can try to use the window.postmessage() function here? -- make sure its secure first
         function findFrame() {
             var shopObj = <%= ShopifyAPI::Shop.current %>;
             console.log("begin findFrame");
-            // never finds signUpUnderline -- this line needs to be changed
-            document.getElementById('pontiacFrame').contentWindow.getElementById("signUpUnderline").onClick = function() {
+            // never finds signUpUnderline
+            document.getElementById("signUpUnderline").onClick = function() {
                 console.log("middle findFrame!!!");
                 if (document.getElementById("iframePresent")) {
                     console.log("FOUND SIGN UP TABLE MODAL");
-                    document.getElementById('pontiacFrame').contentWindow.postMessage(shopObj, "https://26c05261.ngrok.io/#/");
+                    document.getElementById('pontiacFrame').postMessage(shopObj, "https://26c05261.ngrok.io/#/");
                 } else {
                     console.log("sign up modal not found")
                 }
             };
             console.log("end findFrame")
-          /* XSS vulnerable doesnt work
-           console.log("begin findFrame");
-           var iframe = document.getElementById("pontiacFrame");
-           var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-           console.log("inner doc?????");
-           innerDoc.getElementById("signUpUnderline").onclick = function() {
-           console.log("middle findFrame!!!");
-           if (innerDoc.getElementById("iframePresent")) {
-           console.log("FOUND SIGN UP TABLE MODEL")
-           } else {
-           console.log("sign up model not found")
-           }
-           };
-           console.log("end findFrame")
-           */
+            /* XSS vulnerable doesnt work
+             console.log("begin findFrame");
+             var iframe = document.getElementById("pontiacFrame");
+             var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+             console.log("inner doc?????");
+             innerDoc.getElementById("signUpUnderline").onclick = function() {
+             console.log("middle findFrame!!!");
+             if (innerDoc.getElementById("iframePresent")) {
+             console.log("FOUND SIGN UP TABLE MODEL")
+             } else {
+             console.log("sign up model not found")
+             }
+             };
+             console.log("end findFrame")
+             */
         }
     </script>
     <div id="content">
