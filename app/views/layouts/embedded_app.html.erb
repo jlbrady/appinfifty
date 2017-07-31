@@ -31,7 +31,9 @@
     <script type="text/javascript">
         ShopifyApp.ready(function(){
             ShopifyApp.Bar.initialize({});
+            console.log("here")
         });
+        console.log("here2")
         console.log("Session URL: <%= "#{ @shop_session.url }" if @shop_session %>");
         console.log("Shop Name: <%= ShopifyAPI::Shop.current.name %>");
         console.log("Shop Access Token: <%= ShopifyAPI::Shop.headers['X-Shopify-Access-Token'] %>");
