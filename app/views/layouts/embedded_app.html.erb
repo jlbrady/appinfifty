@@ -37,6 +37,7 @@
         console.log("Shop Access Token: <%= ShopifyAPI::Shop.headers['X-Shopify-Access-Token'] %>");
     </script>
     <script type="text/javascript">
+      console.log("beforee findFrame");
       // can try to use the window.postmessage() function here? -- make sure its secure first
         function findFrame() {
             var shopObj = <%= ShopifyAPI::Shop.current %>;
