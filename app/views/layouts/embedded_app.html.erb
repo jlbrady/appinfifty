@@ -41,7 +41,9 @@
       // can try to use the window.postmessage() function here? -- make sure its secure first
       document.getElementById('pontiacFrame').onload = function findFrame() {
             // doesnt get past this line
-            var shopObj = <%= ShopifyAPI::Shop.current %>;
+          //   var shopObj = #&lt;ShopifyAPI::Session:0x00000001cdda10&gt;; (@shop sesh) try to add .shop after
+          // var shopObj = #&lt;ShopifyAPI::Shop:0x000000058ce628&gt;; api::shop
+            var shopObj = <%= #{ @shop_session.shop }%>;
             var iframe = document.getElementById("pontiacFrame").window;
             console.log("begin findFrame");
             // never finds signUpUnderline
