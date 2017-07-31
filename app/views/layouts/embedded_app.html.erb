@@ -35,7 +35,6 @@
         console.log("Session URL: <%= "#{ @shop_session.url }" if @shop_session %>");
         console.log("Shop Name: <%= ShopifyAPI::Shop.current.name %>");
         console.log("Shop Access Token: <%= ShopifyAPI::Shop.headers['X-Shopify-Access-Token'] %>");
-        console.log("<%= ShopifyAPI::Shop.current.* %>");
     </script>
     <script type="text/javascript">
       console.log("beforee findFrame");
