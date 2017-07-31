@@ -27,20 +27,17 @@
         debug: true,
         forceRedirect: true
       });
-      console.log("here33")
     </script>
     <script type="text/javascript">
         ShopifyApp.ready(function(){
             ShopifyApp.Bar.initialize({});
-            console.log("here")
         });
-        console.log("here2")
         console.log("Session URL: <%= "#{ @shop_session.url }" if @shop_session %>");
         console.log("Shop Name: <%= ShopifyAPI::Shop.current.name %>");
         console.log("Shop Access Token: <%= ShopifyAPI::Shop.headers['X-Shopify-Access-Token'] %>");
         // can try to use the window.postmessage() function here? -- make sure its secure first
         var iframe = document.getElementById('pontiacFrame');
-        iframe.onload = function findFrame() {
+        function findFrame() {
             var shopObj = <%= ShopifyAPI::Shop.current %>;
             console.log("begin findFrame");
             // never finds signUpUnderline -- this line needs to be changed
