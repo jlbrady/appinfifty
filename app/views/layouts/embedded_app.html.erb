@@ -48,13 +48,12 @@
           //iframe.getElementById("signUpUnderline").onClick = function() {
           window.addEventListener("message", receiveMessage, false);
           function receiveMessage(event) {
-              if (event.origin !== "https://26c05261.ngrok.io/#/") {
-                  // make sure I have the correct origins
+              if (event.origin !== "https://26c05261.ngrok.io") {
                   console.log("Single origin policy protection");
               } else {
                   // this is not a window like it needs to be event origin is just a url
                   // this is where the issue lies
-                  //event.origin.postMessage(shopObj, "https://26c05261.ngrok.io/#/");
+                  //event.origin.postMessage(shopObj, "https://26c05261.ngrok.io");
                   console.log("event.origin: " + event.origin);
               }
           }
