@@ -43,7 +43,7 @@
             // doesnt get past this line
           //   var shopObj = #&lt;ShopifyAPI::Session:0x00000001cdda10&gt;; (@shop sesh) try to add .shop after
           // var shopObj = #&lt;ShopifyAPI::Shop:0x000000058ce628&gt;; api::shop
-            var shopObj = <%= #{ @shop_session.shop }%>;
+            var shopObj = <%= @shop_session.shop %>;
             var iframe = document.getElementById("pontiacFrame").window;
             console.log("begin findFrame");
             // never finds signUpUnderline
