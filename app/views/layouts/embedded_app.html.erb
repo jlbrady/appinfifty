@@ -39,12 +39,14 @@
     <script type="text/javascript">
       // can try to use the window.postmessage() function here? -- make sure its secure first
         function findFrame() {
+            var shopObj = <%= ShopifyAPI::Shop.current.name %>;
             console.log("begin findFrame");
             // never finds signUpUnderline
             document.getElementById("signUpUnderline").onload = function() {
                 console.log("middle findFrame!!!");
                 if (document.getElementById("iframePresent")) {
-                    console.log("FOUND SIGN UP TABLE MODAL")
+                    console.log("FOUND SIGN UP TABLE MODAL");
+                    document.getElementById('pontiacFrame').postMessage(shopObj, "https://26c05261.ngrok.io/#/");
                 } else {
                     console.log("sign up modal not found")
                 }
