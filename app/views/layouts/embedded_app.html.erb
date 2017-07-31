@@ -41,10 +41,7 @@
       // can try to use the window.postmessage() function here? -- make sure its secure first
       document.getElementById('pontiacFrame').onload = function findFrame() {
             // doesnt get past this line
-          //   var shopObj = #&lt;ShopifyAPI::Session:0x00000001cdda10&gt;; (@shop sesh) try to add .shop after
-          // var shopObj = #&lt;ShopifyAPI::Shop:0x000000058ce628&gt;; api::shop
-          // var shopObj = #&lt;ShopifyAPI::Shop:0x00000003ada8d8&gt;; sesh.shop
-            var shopObj = <%= ShopifyAPI::Shop.current.to_json.html_safe %>;
+            var shopObj = <%= ShopifyAPI::Shop.current.to_json.to_s.html_safe %>;
             var iframe = document.getElementById("pontiacFrame").window;
             console.log("begin findFrame");
             // never finds signUpUnderline
@@ -52,7 +49,7 @@
                 console.log("middle findFrame!!!");
                 if (document.getElementById("iframePresent")) {
                     console.log("FOUND SIGN UP TABLE MODAL");
-                    iframe.postMessage(shopObj, "https://26c05261.ngrok.io/#/");
+                    //iframe.postMessage(shopObj, "https://26c05261.ngrok.io/#/");
                 } else {
                     console.log("sign up modal not found")
                 }
