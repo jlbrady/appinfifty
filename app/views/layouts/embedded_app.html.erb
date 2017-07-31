@@ -39,8 +39,8 @@
     <script type="text/javascript">
       console.log("beforee findFrame");
       // can try to use the window.postmessage() function here? -- make sure its secure first
-      document.getElementById('pontiacFrame').onload = function findFrame() {
-            // doesnt get past this line
+      document.getElementById('pontiacFrame').window.onload = function findFrame() {
+            // doesnt get past this line -- this appears to work now
             var shopObj = <%= ShopifyAPI::Shop.current.to_json.to_s.html_safe %>;
             var iframe = document.getElementById("pontiacFrame").window;
             console.log("begin findFrame");
@@ -49,7 +49,7 @@
                 console.log("middle findFrame!!!");
                 if (document.getElementById("iframePresent")) {
                     console.log("FOUND SIGN UP TABLE MODAL");
-                    //iframe.postMessage(shopObj, "https://26c05261.ngrok.io/#/");
+                    iframe.postMessage(shopObj, "https://26c05261.ngrok.io/#/");
                 } else {
                     console.log("sign up modal not found")
                 }
