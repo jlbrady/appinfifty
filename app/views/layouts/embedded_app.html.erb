@@ -39,21 +39,27 @@
     <script type="text/javascript">
       console.log("beforee findFrame");
       // can try to use the window.postmessage() function here? -- make sure its secure first
+      // null value with .window and without -- cross origin issue here too how to postmessage?
       document.getElementById('pontiacFrame').window.onload = function findFrame() {
-            // doesnt get past this line -- this appears to work now
-            var shopObj = <%= ShopifyAPI::Shop.current.to_json.to_s.html_safe %>;
-            var iframe = document.getElementById("pontiacFrame").window;
-            console.log("begin findFrame");
-            // never finds signUpUnderline
-            iframe.getElementById("signUpUnderline").onClick = function() {
-                console.log("middle findFrame!!!");
-                if (document.getElementById("iframePresent")) {
-                    console.log("FOUND SIGN UP TABLE MODAL");
-                    iframe.postMessage(shopObj, "https://26c05261.ngrok.io/#/");
-                } else {
-                    console.log("sign up modal not found")
-                }
-            };
+          // cant use html_safe here need to sanitize inputs first
+          var shopObj = <%= ShopifyAPI::Shop.current.to_json.to_s.html_safe %>;
+          //var iframe = document.getElementById("pontiacFrame").window; this will never work with multiple origins
+          console.log("begin findFrame");
+          // never finds signUpUnderline
+          //iframe.getElementById("signUpUnderline").onClick = function() {
+          window.addEventListener("message", receiveMessage, false);
+          function receiveMessage(event) {
+              console.log("event.origin");
+              if (event.origin !== "https://26c05261.ngrok.io/#/") {
+                  // make sure I have the correct origins
+                  console.log("Single origin policy protection");
+              } else {
+                  // this is not a window like it needs to be event origin is just a url
+                  // this is where the issue lies
+                  //event.origin.postMessage(shopObj, "https://26c05261.ngrok.io/#/");
+              }
+          }
+      };
             console.log("end findFrame")
         }
     </script>
