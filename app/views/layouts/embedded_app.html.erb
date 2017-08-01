@@ -37,25 +37,19 @@
         console.log("Shop Access Token: <%= ShopifyAPI::Shop.headers['X-Shopify-Access-Token'] %>");
     </script>
     <script type="text/javascript">
-      console.log("before findFrame");
-      // null value with .window and without -- cross origin issue here too how to postmessage?
-          // cant use html_safe here need to sanitize inputs first
-          var shopObj = <%= ShopifyAPI::Shop.current.to_json.to_s.html_safe %>;
-          console.log("begin findFrame");
-          console.log("window.addEventListener embedded_app: " + window.location);
-          window.addEventListener("message", receiveMessage, false);
-          function receiveMessage(event) {
-              if (event.origin !== "https://976b4c0a.ngrok.io") {
-                  console.log("SINGLE ORIGIN POLICY: " + event.origin);
-              } else {
-                  // frames[0] safe?
-                  // this is where the issue lies
-                  window.frames[0].postMessage(shopObj, "https://976b4c0a.ngrok.io");
-                  console.log("EVENT.ORIGIN: " + event.origin); // made it here
-              }
+      // cant use html_safe here need to sanitize inputs first
+      var shopObj = <%= ShopifyAPI::Shop.current.to_json.to_s.html_safe %>;
+      window.addEventListener("message", function receiveMessage(event) {
+          if (event.origin !== "https://976b4c0a.ngrok.io") {
+              console.log("Err Multiple Origins: " + event.origin);
+          } else {
+              //window.frames[0].postMessage(shopObj, "https://976b4c0a.ngrok.io");
+              event.source.postMessage(shopObj, "https://976b4c0a.ngrok.io");
+              console.log("EVENT.ORIGIN: " + event.origin);
           }
-          console.log("end findFrame");
+      }, false);
     </script>
+
       <iframe id="pontiacFrame" width="100%" height="100%" frameborder="0" src="https://976b4c0a.ngrok.io"/>
 
     <% if content_for?(:javascript) %>
