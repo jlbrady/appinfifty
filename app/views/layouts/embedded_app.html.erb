@@ -42,6 +42,7 @@
           // cant use html_safe here need to sanitize inputs first
           var shopObj = <%= ShopifyAPI::Shop.current.to_json.to_s.html_safe %>;
           console.log("begin findFrame");
+          console.log("window.addEventListener embedded_app: " + JSON.stringify.window);
           window.addEventListener("message", receiveMessage, false);
           function receiveMessage(event) {
               if (event.origin !== "https://976b4c0a.ngrok.io") {
