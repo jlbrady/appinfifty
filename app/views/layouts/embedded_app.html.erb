@@ -44,7 +44,7 @@
           if (event.origin !== "https://976b4c0a.ngrok.io") {
               console.log("Err Multiple Origins: " + event.origin);
           } else if (event.data === "modalOpened") {
-              // dont think checking e.data like this is secure
+              // checking e.data like this does not make it secure
               event.source.postMessage(shopObj, "https://976b4c0a.ngrok.io");
               console.log("EVENT.ORIGIN: " + event.origin);
           }
