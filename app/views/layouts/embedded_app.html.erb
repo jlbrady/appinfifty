@@ -39,7 +39,7 @@
     <script type="text/javascript">
       // cant use html_safe here need to sanitize inputs
       var shopObj = <%= ShopifyAPI::Shop.current.to_json.to_s.html_safe %>;
-      var accessToken = "<%= ShopifyAPI::Shop.headers['X-Shopify-Access-Token'] %>;"
+      var accessToken = "<%= ShopifyAPI::Shop.headers['X-Shopify-Access-Token'] %>";
       window.addEventListener("message", function receiveMessage(event)
       {
           if (event.origin !== "https://20c4a598.ngrok.io") {
