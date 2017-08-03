@@ -32,16 +32,19 @@
         ShopifyApp.ready(function(){
             ShopifyApp.Bar.initialize({});
         });
-        //console.log("Session URL: <%= "#{ @shop_session.url }" if @shop_session %>");
-        //console.log("Shop Name: <%= ShopifyAPI::Shop.current.name %>");
-        //console.log("Shop Access Token: <%= ShopifyAPI::Shop.headers['X-Shopify-Access-Token'] %>");
     </script>
     <script type="text/javascript">
-      // cant use html_safe here need to sanitize inputs
+      // html_safe creates xss vulnerabilities but "React basically makes it so you
+      // can't insert markup unless you create the elements yourself in the render function"
+      // as long as you avoid using dangerouslySetInnerHTML()
+      // https://stackoverflow.com/questions/33644499/what-does-it-mean-when-they-say-react-is-xss-protected
       var shopObj = <%= ShopifyAPI::Shop.current.to_json.to_s.html_safe %>;
       var accessToken = "<%= ShopifyAPI::Shop.headers['X-Shopify-Access-Token'] %>";
       window.addEventListener("message", function receiveMessage(event)
       {
+          // if an event of type "message" and trusted origin reaches window obj
+          // check that the message.data is == to some predetermined value.
+          // Respond with shop.current obj and that shop's unique access token once trusted.
           if (event.origin !== "https://dabc6b16.ngrok.io") {
               console.log("Error Different Origin: " + event.origin);
           } else if (event.data === "modalOpened") {
