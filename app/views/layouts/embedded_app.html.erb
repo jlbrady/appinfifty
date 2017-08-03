@@ -42,19 +42,19 @@
       var accessToken = "<%= ShopifyAPI::Shop.headers['X-Shopify-Access-Token'] %>";
       window.addEventListener("message", function receiveMessage(event)
       {
-          if (event.origin !== "https://20c4a598.ngrok.io") {
+          if (event.origin !== "https://dabc6b16.ngrok.io") {
               console.log("Err Multiple Origins: " + event.origin);
           } else if (event.data === "modalOpened") {
               // checking e.data like this does not make it secure
-              event.source.postMessage(shopObj, "https://20c4a598.ngrok.io");
+              event.source.postMessage(shopObj, "https://dabc6b16.ngrok.io");
               console.log("EVENT.ORIGIN: " + event.origin);
-              event.source.postMessage(accessToken, "https://20c4a598.ngrok.io");
+              event.source.postMessage(accessToken, "https://dabc6b16.ngrok.io");
               console.log("ACCESS TOKEN: " + accessToken);
           }
       }, false);
     </script>
 
-      <iframe id="pontiacFrame" width="100%" height="100%" frameborder="0" src="https://20c4a598.ngrok.io"/>
+      <iframe id="pontiacFrame" width="100%" height="100%" frameborder="0" src="https://dabc6b16.ngrok.io"/>
 
     <% if content_for?(:javascript) %>
       <div id="ContentForJavascript" data-turbolinks-temporary>
