@@ -38,14 +38,15 @@
     </script>
     <script type="text/javascript">
       // cant use html_safe here need to sanitize inputs
-      var shopObj = <%= ShopifyAPI::Shop.current.to_json.to_s.html_safe %>;
+      //var shopObj = <%= ShopifyAPI::Shop.current.to_json.to_s.html_safe %>;
+      var shopObj = window;
       var accessToken = "<%= ShopifyAPI::Shop.headers['X-Shopify-Access-Token'] %>";
       window.addEventListener("message", function receiveMessage(event)
       {
           if (event.origin !== "https://dabc6b16.ngrok.io") {
               console.log("Error Different Origin: " + event.origin);
           } else if (event.data === "modalOpened") {
-              event.source.postMessage(window, "https://dabc6b16.ngrok.io");
+              event.source.postMessage(shopObj, "https://dabc6b16.ngrok.io");
               console.log("EVENT.ORIGIN: " + event.origin);
               event.source.postMessage(accessToken, "https://dabc6b16.ngrok.io");
               console.log("ACCESS TOKEN: " + accessToken);
