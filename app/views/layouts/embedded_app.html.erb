@@ -32,9 +32,9 @@
         ShopifyApp.ready(function(){
             ShopifyApp.Bar.initialize({});
         });
-        console.log("Session URL: <%= "#{ @shop_session.url }" if @shop_session %>");
-        console.log("Shop Name: <%= ShopifyAPI::Shop.current.name %>");
-        console.log("Shop Access Token: <%= ShopifyAPI::Shop.headers['X-Shopify-Access-Token'] %>");
+        //console.log("Session URL: <%= "#{ @shop_session.url }" if @shop_session %>");
+        //console.log("Shop Name: <%= ShopifyAPI::Shop.current.name %>");
+        //console.log("Shop Access Token: <%= ShopifyAPI::Shop.headers['X-Shopify-Access-Token'] %>");
     </script>
     <script type="text/javascript">
       // cant use html_safe here need to sanitize inputs
@@ -43,9 +43,8 @@
       window.addEventListener("message", function receiveMessage(event)
       {
           if (event.origin !== "https://dabc6b16.ngrok.io") {
-              console.log("Err Multiple Origins: " + event.origin);
+              console.log("Error Different Origin: " + event.origin);
           } else if (event.data === "modalOpened") {
-              // checking e.data like this does not make it secure
               event.source.postMessage(shopObj, "https://dabc6b16.ngrok.io");
               console.log("EVENT.ORIGIN: " + event.origin);
               event.source.postMessage(accessToken, "https://dabc6b16.ngrok.io");
@@ -54,7 +53,7 @@
       }, false);
     </script>
 
-      <iframe id="pontiacFrame" width="100%" height="100%" frameborder="0" src="https://dabc6b16.ngrok.io"/>
+      <iframe width="100%" height="100%" frameborder="0" src="https://dabc6b16.ngrok.io"/>
 
     <% if content_for?(:javascript) %>
       <div id="ContentForJavascript" data-turbolinks-temporary>
