@@ -48,13 +48,13 @@
           if (event.origin !== "https://dabc6b16.ngrok.io") {
               console.log("Error Different Origin: " + event.origin);
           } else if (event.data === "modalOpened") {
-              event.source.postMessage(shopObj, "https://dabc6b16.ngrok.io");
-              event.source.postMessage(accessToken, "https://dabc6b16.ngrok.io");
+              event.source.postMessage(shopObj, "https://85fb42fb.ngrok.io");
+              event.source.postMessage(accessToken, "https://85fb42fb.ngrok.io");
           }
       }, false);
     </script>
 
-      <iframe width="100%" height="100%" frameborder="0" src="https://dabc6b16.ngrok.io"/>
+      <iframe width="100%" height="100%" frameborder="0" src="https://85fb42fb.ngrok.io"/>
 
     <% if content_for?(:javascript) %>
       <div id="ContentForJavascript" data-turbolinks-temporary>
