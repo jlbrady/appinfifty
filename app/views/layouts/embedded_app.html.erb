@@ -45,7 +45,7 @@
           // if an event of type "message" and trusted origin reaches window obj
           // check that the message.data is == to some predetermined value.
           // Respond with shop.current obj and that shop's unique access token once trusted.
-          if (event.origin !== "https://dabc6b16.ngrok.io") {
+          if (event.origin !== "https://85fb42fb.ngrok.io") {
               console.log("Error Different Origin: " + event.origin);
           } else if (event.data === "modalOpened") {
               event.source.postMessage(shopObj, "https://85fb42fb.ngrok.io");
