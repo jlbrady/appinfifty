@@ -120,7 +120,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="embedded_app.html.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="embedded_app.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/embedded_app.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="215">
@@ -130,7 +130,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shopify_app.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="shopify_app.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/initializers/shopify_app.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="84">
@@ -167,8 +167,6 @@
       <find>eventListene</find>
       <find>eventListener</find>
       <find>pontiacFrame</find>
-      <find>ng</find>
-      <find>ngrok</find>
       <find>m</find>
       <find>mousewhe</find>
       <find>mousewheel</find>
@@ -182,6 +180,8 @@
       <find>config</find>
       <find>scope</find>
       <find>read_orders</find>
+      <find>ng</find>
+      <find>ngrok</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -199,8 +199,8 @@
         <option value="$PROJECT_DIR$/config/initializers/omniauth.rb" />
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
         <option value="$PROJECT_DIR$/app/controllers/application_charges_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/embedded_app.html.erb" />
         <option value="$PROJECT_DIR$/config/initializers/shopify_app.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/embedded_app.html.erb" />
       </list>
     </option>
   </component>
@@ -844,15 +844,16 @@
       <workItem from="1500485071084" duration="10200000" />
       <workItem from="1500913090266" duration="38082000" />
       <workItem from="1501091935675" duration="66651000" />
-      <workItem from="1502116196173" duration="11011000" />
+      <workItem from="1502116196173" duration="13595000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128690000" />
+    <option name="totallyTimeSpent" value="131274000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1796875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1139,19 +1140,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/6fe642fd/67665daf-7006-43be-9d78-51589a018af4/d3hak55aj3jdep.public.shops">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1196,14 +1184,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/embedded_app.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="39" column="65" lean-forward="false" selection-start-line="39" selection-start-column="65" selection-end-line="39" selection-end-column="65" />
           <folding />
         </state>
       </provider>
@@ -1276,6 +1256,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" column="29" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/6fe642fd/67665daf-7006-43be-9d78-51589a018af4/d3hak55aj3jdep.public.shops">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/embedded_app.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="39" column="65" lean-forward="false" selection-start-line="39" selection-start-column="65" selection-end-line="39" selection-end-column="65" />
           <folding />
         </state>
       </provider>
